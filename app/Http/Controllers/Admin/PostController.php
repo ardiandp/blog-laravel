@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Category;
+use App\Models\Comment;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -64,6 +66,7 @@ class PostController extends Controller
      */
     public function edit(string $id)
     {
+        $post = Post::findOrFail($id);
         $categories = Category::all();
         return view('admin.posts.edit', compact('post', 'categories'));
     }
@@ -79,6 +82,7 @@ class PostController extends Controller
             'category_id' => 'required|exists:categories,id',
         ]);
 
+        $post = Post::findOrFail($id);
         $post->update([
             'title' => $request->title,
             'slug' => Str::slug($request->title),

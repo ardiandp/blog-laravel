@@ -48,7 +48,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 
     Route::resource('tags', Admin\TagController::class);
 
-    
+
     Route::get('comments', [CommentController::class, 'index'])->name('admin.comments.index');
     Route::get('comments/create', [CommentController::class, 'create'])->name('admin.comments.create');
     Route::post('comments', [CommentController::class, 'store'])->name('admin.comments.store');
@@ -57,9 +57,9 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::delete('comments/{comment}', [CommentController::class, 'destroy'])->name('admin.comments.destroy');
 });
 
-Route::get('/dashboard', function () {
+Route::get('admin/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified'])->name('admin.dashboard');
 
 Auth::routes();
 

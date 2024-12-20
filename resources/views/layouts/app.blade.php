@@ -18,7 +18,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel2 ') }}
@@ -31,16 +31,16 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
+                            <a class="nav-link text-white" href="{{ route('admin.dashboard') }}">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('admin.users.index') }}">Users</a>
+                            <a class="nav-link text-white" href="{{ route('admin.users.index') }}">Users</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Posts</a>
+                            <a class="nav-link text-white" href="{{ route('admin.posts.index') }}">Posts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Categories</a>
+                            <a class="nav-link text-white" href="{{ route('admin.categories.index') }}">Categories</a>
                         </li>
                     </ul>
 
