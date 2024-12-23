@@ -50,6 +50,7 @@ Berikut adalah langkah-langkah untuk menjalankan aplikasi ini:
      ```
      php artisan key:generate
      ```
-
+   - Halaman frontend untuk post dan detail post sudah jadi, Anda dapat mengaksesnya di `http://localhost:8000/blog` atau sesuai dengan konfigurasi server Anda.
+   - Fungsi kontak, about, dan laman "on progress" masih dalam tahap pengembangan, Anda dapat menambahkan fitur-fitur ini sendiri.
 Dengan mengikuti langkah-langkah di atas, Anda seharusnya dapat menjalankan aplikasi ini di komputer Anda. Jika Anda mengalami masalah, pastikan untuk memeriksa dokumentasi dan log error untuk solusi lebih lanjut.
 
