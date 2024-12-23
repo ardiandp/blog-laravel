@@ -6,6 +6,9 @@ use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\CommentController;
+
+//Route Front End 
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +23,13 @@ use App\Http\Controllers\Admin\CommentController;
 Route::get('/', function () {
     return view('frontend.home');
 });
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/about', function () {
+    return view('frontend.about');
+})->name('about');
+
+
+
 
 /*Route::get('/', function () {
     return view('welcome');
@@ -65,6 +75,6 @@ Route::get('admin/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('admin.dashboard');
 
-Auth::routes();
+//Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
