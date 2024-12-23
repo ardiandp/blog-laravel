@@ -4,19 +4,31 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
+            <style>
+                .animate__animated.animate__fadeInLeft {
+                    --animate-duration: 1.5s;
+                }
+                .animate__animated.animate__fadeInRight {
+                    --animate-duration: 1.5s;
+                }
+            </style>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+            <script>
+                new WOW().init();
+            </script>
             <div class="row">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="text-center">Belum punya akun?<br>
-                            <a href="{{ route('register') }}">Daftar di sini</a>
-                            </p>
-                        </div>
-                    </div>
+                <div class="col-md-6 col-lg-5 animate__animated animate__fadeInLeft bg-primary text-white p-5 text-center rounded-left">
+                    <h1 class="display-4">Selamat Datang</h1>
+                    <p class="lead">Silakan daftar atau login untuk mengakses halaman admin</p>
+                    <hr class="my-4">
+                    <p class="lead">
+                        <a class="btn btn-outline-light btn-lg" href="{{ route('register') }}" role="button">Daftar</a>
+                    </p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-lg-5 animate__animated animate__fadeInRight">
                     <div class="card">
-                        <div class="card-header">{{ __('Login') }}</div>
+                        <div class="card-header bg-primary text-white">{{ __('Login') }}</div>
                         <div class="card-body">
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf

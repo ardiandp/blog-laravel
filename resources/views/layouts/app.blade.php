@@ -15,6 +15,31 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+    <!-- Summernote CSS -->
+<link href="https://cdn.jsdelivr.net/npm/summernote/dist/summernote.min.css" rel="stylesheet">
+
+<!-- Summernote JS -->
+<script src="https://cdn.jsdelivr.net/npm/summernote/dist/summernote.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#content').summernote({
+            height: 300, // Tinggi editor
+            placeholder: 'Tulis konten di sini...',
+            toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'italic', 'underline', 'clear']],
+                ['fontname', ['fontname']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']]
+            ]
+        });
+    });
+</script>
+
 </head>
 <body>
     <div id="app">
