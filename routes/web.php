@@ -31,6 +31,8 @@ Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::get('/blog', [PageController::class, 'blog'])->name('blog.index');
 Route::get('/blog/{slug}', [PageController::class, 'blogShow'])->name('blog.show'); // Optional for detail view
+Route::get('/search', [HomeController::class, 'search'])->name('search');
+
 
 
 

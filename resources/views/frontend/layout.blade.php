@@ -15,7 +15,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a class="nav-link text-white active" aria-current="page" href="{{ url('/') }}">Home</a>
                     </li>
@@ -29,6 +29,11 @@
                         <a class="nav-link text-white" href="{{ url('/contact') }}">Contact</a>
                     </li>
                 </ul>
+                <form class="d-flex" role="search" action="{{ route('search') }}" method="get">
+                    @csrf
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
             </div>
         </div>
     </nav>
