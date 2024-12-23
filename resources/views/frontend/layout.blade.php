@@ -56,7 +56,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Post Image">
+                    <img src="https://dummyimage.com/150/150" class="card-img-top" alt="Post Image">
                     <div class="card-body">
                         <h5 class="card-title">Post Title</h5>
                         <p class="card-text">A brief description of the post goes here.</p>
@@ -66,7 +66,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Post Image">
+                    <img src="https://dummyimage.com/70/50" class="card-img-top" alt="Post Image">
                     <div class="card-body">
                         <h5 class="card-title">Post Title</h5>
                         <p class="card-text">A brief description of the post goes here.</p>
