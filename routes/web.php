@@ -18,8 +18,12 @@ use App\Http\Controllers\Admin\CommentController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.home');
 });
+
+/*Route::get('/', function () {
+    return view('welcome');
+}); */
 
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('users', [UserController::class, 'index'])->name('admin.users.index');
