@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\CommentController;
+use App\Http\Controllers\PageController;
 
 //Route Front End 
 use App\Http\Controllers\HomeController;
@@ -20,13 +21,19 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('frontend.home');
-});
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/about', function () {
-    return view('frontend.about');
-})->name('about');
+}); */
+
+
+Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/about', [PageController::class, 'about'])->name('about');
+Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+Route::get('/blog', [PageController::class, 'blog'])->name('blog.index');
+Route::get('/blog/{slug}', [PageController::class, 'blogShow'])->name('blog.show'); // Optional for detail view
+
+
+
 
 
 
